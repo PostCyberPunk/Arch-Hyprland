@@ -20,9 +20,9 @@ while true; do
     echo "${WARN} This script will add or remove your user from the 'input' group."
     echo "${NOTE} Please note that adding yourself to the 'input' group might be necessary for waybar keyboard-state functionality."
 
-    read -p "${YELLOW}Do you want to proceed? (y/n): ${RESET}" choice
+    read -p "${YELLOW}Do you want to proceed? (y/n): ${RESET}" input_group_choid
 
-    if [[ $choice == "y" || $choice == "Y" ]]; then
+    if [[ $input_group_choid == "y" || $input_group_choid == "Y" ]]; then
         # Check if the 'input' group exists
         if grep -q '^input:' /etc/group; then
             echo "${OK} 'input' group exists."
@@ -41,7 +41,7 @@ while true; do
         # Log the addition of the user to the 'input' group
         echo "User added to 'input' group" >> "$LOG"
         break  # Break out of the loop if 'yes' is chosen
-    elif [[ $choice == "n" || $choice == "N" ]]; then
+    elif [[ $input_group_choid == "n" || $input_group_choid == "N" ]]; then
         echo "${NOTE} No changes made. Exiting the script."
         break  # Break out of the loop if 'no' is chosen
     else
