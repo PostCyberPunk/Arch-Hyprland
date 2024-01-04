@@ -105,6 +105,12 @@ ask_custom_option() {
     local valid_options="$2"
     local response_var="$3"
 
+    if [[ ! -z "${!3}" ]]; then
+      return 0
+    else
+     eval "$3=''" 
+    fi
+
     while true; do
         read -p "$(colorize_prompt "$CAT"  "$prompt ($valid_options): ")" choice
         if [[ " $valid_options " == *" $choice "* ]]; then
