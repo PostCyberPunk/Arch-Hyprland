@@ -128,7 +128,7 @@ execute_script() {
     if [ -f "$script_path" ]; then
         chmod +x "$script_path"
         if [ -x "$script_path" ]; then
-            "$script_path"
+            env USE_PRESET=$use_preset  "$script_path"
         else
             echo "Failed to make script '$script' executable."
         fi
