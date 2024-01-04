@@ -11,3 +11,5 @@ xdph="Y"
 zsh="N"
 rog="N"
 dots="N"
+
+blacklist_nouveau="Y"
