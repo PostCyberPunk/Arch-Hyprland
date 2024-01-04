@@ -59,16 +59,16 @@ colorize_prompt() {
 LOG="install-$(date +%d-%H%M%S).log"
 
 # Initialize variables to store user responses
-aur_helper=""
-bluetooth=""
-dots=""
-gtk_themes=""
-nvidia=""
-rog=""
-sddm=""
-thunar=""
-xdph=""
-zsh=""
+# aur_helper=""
+# bluetooth=""
+# dots=""
+# gtk_themes=""
+# nvidia=""
+# rog=""
+# sddm=""
+# thunar=""
+# xdph=""
+# zsh=""
 
 # Define the directory where your scripts are located
 script_directory=install-scripts
