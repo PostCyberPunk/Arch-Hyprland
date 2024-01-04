@@ -2,6 +2,9 @@
 # 💫 https://github.com/JaKooLit 💫 #
 # Adding users into input group #
 
+if [[ $USE_PRESET = [Yy] ]]; then
+  source ./preset.sh
+fi
 
 ## WARNING: DO NOT EDIT BEYOND THIS LINE IF YOU DON'T KNOW WHAT YOU ARE DOING! ##
 # Determine the directory where the script is located
@@ -20,7 +23,9 @@ while true; do
     echo "${WARN} This script will add or remove your user from the 'input' group."
     echo "${NOTE} Please note that adding yourself to the 'input' group might be necessary for waybar keyboard-state functionality."
 
-    read -p "${YELLOW}Do you want to proceed? (y/n): ${RESET}" input_group_choid
+    if [[ -z $input_group_choid ]]; then
+      read -p "${YELLOW}Do you want to proceed? (y/n): ${RESET}" input_group_choid
+    fi
 
     if [[ $input_group_choid == "y" || $input_group_choid == "Y" ]]; then
         # Check if the 'input' group exists

@@ -1,6 +1,9 @@
 #!/bin/bash
 # 💫 https://github.com/JaKooLit 💫 #
 # Nvidia Stuffs #
+if [[ $USE_PRESET = [Yy] ]]; then
+  source ./preset.sh
+fi
 
 nvidia_pkg=(
   nvidia-dkms
@@ -93,7 +96,9 @@ else
 fi
 
 # Blacklist nouveau
-read -n1 -rep "${CAT} Would you like to blacklist nouveau? (y/n)" blacklist_nouveau
+    if [[ -z $blacklist_nouveau ]]; then
+      read -n1 -rep "${CAT} Would you like to blacklist nouveau? (y/n)" blacklist_nouveau
+    fi
 echo
 if [[ $blacklist_nouveau =~ ^[Yy]$ ]]; then
   NOUVEAU="/etc/modprobe.d/nouveau.conf"
