@@ -23,8 +23,8 @@ LOG="Install-Logs/install-$(date +%d-%H%M%S)_zsh.log"
 
 ## Optional Pokemon color scripts
 while true; do
-    read -p "${CAT} OPTIONAL - Do you want to add Pokemon color scripts? (y/n): " choice
-    case "$choice" in
+    read -p "${CAT} OPTIONAL - Do you want to add Pokemon color scripts? (y/n): " pokemon_choice
+    case "$pokemon_choice" in
         [Yy]*)
             zsh+=('pokemon-colorscripts-git')
             sed -i '/#pokemon-colorscripts --no-title -s -r/s/^#//' assets/.zshrc
