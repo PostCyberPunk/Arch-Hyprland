@@ -25,12 +25,17 @@ echo "$(tput setaf 3)NOTE: If you are installing on a VM, ensure to enable 3D ac
 echo
 
 read -p "$(tput setaf 6)Would you like to proceed? (y/n): $(tput sgr0)" proceed
+read -p "$(tput setaf 6)Would you like to preset? (y/n): $(tput sgr0)" use_preset
+
 
 if [ "$proceed" != "y" ]; then
     echo "Installation aborted."
     exit 1
 fi
 
+if [[ $use_preset = [Yy] ]]; then
+  source ./preset.sh
+fi
 
 # Create Directory for Install Logs
 if [ ! -d Install-Logs ]; then
@@ -137,8 +142,6 @@ printf "\n"
 ask_yes_no "-Do you want to configure Bluetooth?" bluetooth
 printf "\n"
 ask_yes_no "-Do you want to install Thunar file manager?" thunar
-printf "\n"
-ask_yes_no "-Install & configure SDDM log-in Manager w/ (Optional) SDDM Theme?" sddm
 printf "\n"
 ask_yes_no "-Install XDG-DESKTOP-PORTAL-HYPRLAND? (For proper Screen Share ie OBS)" xdph
 printf "\n"
