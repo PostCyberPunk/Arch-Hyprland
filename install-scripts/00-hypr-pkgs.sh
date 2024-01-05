@@ -21,7 +21,7 @@ imagemagick
 jq
 kitty
 kvantum
-nano  
+# nano  
 network-manager-applet 
 pamixer 
 pavucontrol
@@ -29,7 +29,7 @@ pipewire-alsa
 playerctl
 polkit-gnome
 python-requests
-python-pywal 
+# python-pywal 
 qt5ct
 qt6ct
 qt6-svg
@@ -52,23 +52,23 @@ yad
 # the following packages can be deleted. however, dotfiles may not work properly
 hypr_package_2=(
 brightnessctl 
-btop
-cava
+# btop
+# cava
 eog
 gnome-system-monitor
-mousepad 
-mpv
-mpv-mpris 
+# mousepad 
+# mpv
+# mpv-mpris 
 nvtop
 nwg-look-bin
 pacman-contrib
-vim
+# vim
 wlsunset
-yt-dlp
+# yt-dlp
 )
 
 fonts=(
-adobe-source-code-pro-fonts 
+adobe-source-code-pro-fonts
 noto-fonts-emoji
 otf-font-awesome 
 ttf-droid 

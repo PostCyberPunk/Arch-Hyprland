@@ -7,13 +7,13 @@ aur_helper="yay"
 ###-Do you have any nvidia gpu in your system?
 nvidia="Y"
 ###-Install GTK themes (required for Dark/Light function)?
-gtk_themes="Y"
+gtk_themes="N"
 ###-Do you want to configure Bluetooth?
 bluetooth="Y"
 ###-Do you want to install Thunar file manager?
 thunar="Y"
 ###-Do you want to install Thunar file manager?
-sddm="Y"
+sddm="N"
 ###-Install XDG-DESKTOP-PORTAL-HYPRLAND? (For proper Screen Share ie OBS)
 xdph="Y"
 ###-Install zsh, oh-my-zsh & (Optional) pokemon-colorscripts?
@@ -32,7 +32,7 @@ XDPH1="Y"
 ### SDDM is already installed. Would you like to manually install sddm-git to remove it? This requires manual intervention. (y/n)
 manual_install_sddm="N"
 ### OPTIONAL - Would you like to install SDDM themes? (y/n)
-install_sddm_theme="Y"
+install_sddm_theme="N"
 ### " This script will add or remove your user from the 'input' group."
 ### " Please note that adding yourself to the 'input' group might be necessary for waybar keyboard-state functionality."
 input_group_choid="Y"
