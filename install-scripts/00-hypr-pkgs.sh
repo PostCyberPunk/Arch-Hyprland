@@ -8,7 +8,10 @@
 
 # add packages wanted here
 Extra=(
-
+peaclock
+neofetch
+neo-matrix
+pipes.sh
 )
 
 hypr_package=( 
@@ -21,7 +24,6 @@ imagemagick
 jq
 kitty
 kvantum
-# nano  
 network-manager-applet 
 pamixer 
 pavucontrol
@@ -29,7 +31,6 @@ pipewire-alsa
 playerctl
 polkit-gnome
 python-requests
-# python-pywal 
 qt5ct
 qt6ct
 qt6-svg
@@ -52,25 +53,19 @@ yad
 # the following packages can be deleted. however, dotfiles may not work properly
 hypr_package_2=(
 brightnessctl 
-# btop
-# cava
 eog
 gnome-system-monitor
-# mousepad 
-# mpv
-# mpv-mpris 
 nvtop
 nwg-look-bin
 pacman-contrib
-# vim
-wlsunset
-# yt-dlp
 )
 
 fonts=(
 adobe-source-code-pro-fonts
+nerd-fonts-cascadia-code
+nerd-fonts-profont
 noto-fonts-emoji
-otf-font-awesome 
+# otf-font-awesome 
 ttf-droid 
 ttf-fira-code
 ttf-jetbrains-mono 
