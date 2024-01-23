@@ -52,12 +52,15 @@ yad
 
 # the following packages can be deleted. however, dotfiles may not work properly
 hypr_package_2=(
+firefox
 brightnessctl 
 eog
+hyprpicker-git
 gnome-system-monitor
 nvtop
 nwg-look-bin
 pacman-contrib
+vlc
 )
 
 fonts=(
